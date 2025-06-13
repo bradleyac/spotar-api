@@ -6,7 +6,7 @@ namespace SpotAR.API.Models;
 public class AdsbResult
 {
     [JsonPropertyName("ac")]
-    public List<Plane> Planes { get; set; } = [];
+    public List<Aircraft> Planes { get; set; } = [];
     [JsonPropertyName("msg")]
     public string? Message { get; set; }
     [JsonPropertyName("total")]
