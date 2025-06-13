@@ -10,8 +10,10 @@ public class Aircraft
     public float Latitude { get; set; }
     [JsonPropertyName("lon")]
     public float Longitude { get; set; }
+    [JsonConverter(typeof(AltJsonConverter))]
     [JsonPropertyName("alt_geom")]
-    public string? AltGeomFt { get; set; }
+    public float? AltGeomFt { get; set; }
+    [JsonConverter(typeof(AltJsonConverter))]
     [JsonPropertyName("alt_baro")]
-    public string? AltBaroFt { get; set; }
+    public float? AltBaroFt { get; set; }
 }
