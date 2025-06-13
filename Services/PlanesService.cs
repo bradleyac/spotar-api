@@ -8,7 +8,7 @@ public class PlanesService(IHttpClientFactory httpClientFactory)
 {
     private IHttpClientFactory _httpClientFactory = httpClientFactory;
 
-    public async Task<List<Aircraft>> GetPlanesNearMe(double latitude, double longitude)
+    public async Task<List<Aircraft>> GetPlanesNearMe(float latitude, float longitude)
     {
         var client = _httpClientFactory.CreateClient("ADSB-API");
 
