@@ -19,9 +19,9 @@ public class GetPlanesNearMe
     }
 
     [Function("GetPlanesNearMe")]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "planes/nearby/{latitude:double}/{longitude:double}")] HttpRequest req, string latitude, string longitude)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "planes/nearby/{latitude:float}/{longitude:float}")] HttpRequest req, string latitude, string longitude)
     {
-        var result = await _planesService.GetPlanesNearMe(double.Parse(latitude), double.Parse(longitude));
+        var result = await _planesService.GetPlanesNearMe(float.Parse(latitude), float.Parse(longitude));
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
         return new JsonResult(result);
