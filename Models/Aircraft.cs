@@ -11,7 +11,7 @@ public class Aircraft
     [JsonPropertyName("lon")]
     public float Longitude { get; set; }
     [JsonPropertyName("alt_geom")]
-    public float? AltGeomFt { get; set; }
+    public string? AltGeomFt { get; set; }
     [JsonPropertyName("alt_baro")]
-    public float? AltBaroFt { get; set; }
+    public string? AltBaroFt { get; set; }
 }
