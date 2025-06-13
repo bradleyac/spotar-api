@@ -5,7 +5,7 @@ namespace SpotAR.API.Models;
 public class Aircraft
 {
     [JsonPropertyName("flight")]
-    public required string Flight { get; set; }
+    public string Flight { get; set; } = "UNKNOWN";
     [JsonPropertyName("lat")]
     public float Latitude { get; set; }
     [JsonPropertyName("lon")]
